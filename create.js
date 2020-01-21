@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function createData(data) {
+function createUser(data) {
   // for (let i in data) {
   //   if (!data[i]) {
   //     console.log("Input is not valid!");
@@ -21,23 +21,37 @@ function createData(data) {
   } else {
     console.log('Input is not valid!')
   }
+}
 
-
+function getUser(data) {
+  var user = require('./data/users.json');
+  console.log(user[data.id - 1])
 }
 
 function createPost(data) {
-  var post = require('./data/posts.json');
-  post.push({
-    id: user.length + 1,
-    tittle: data.tittle,
-    body: data.body
-  })
-
-  fs.writeFileSync(`./data/posts.json`, JSON.stringify(post, null, 2));
-  console.log('Data created!');
+    var post = require('./data/posts.json');
+    if (data) {
+      post.push({
+      id: post.length + 1,
+      tittle: data.tittle,
+      body: data.body
+    })
+    fs.writeFileSync(`./data/posts.json`, JSON.stringify(post, null, 2));
+    console.log('Data created!');
+  } else {
+    console.log('Not found!')
+  }
 }
 
+function getPost(data) {
+  var post = require('./data/posts.json');
+  console.log(post[data.id - 1])
+}
+
+
 module.exports = {
-  createData,
-  createPost
+  createUser,
+  getUser,
+  createPost,
+  getPost
 }
