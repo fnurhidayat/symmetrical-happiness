@@ -5,7 +5,7 @@ var method = args[0];
 
 switch(method) {
 
-  case 'createData':
+  case 'create_user':
     create({
       name: args[1],
       email: args[2],
