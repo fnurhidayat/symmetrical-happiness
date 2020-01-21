@@ -6,19 +6,19 @@ var method = args[0];
 switch(method) {
 
   case 'create_user':
-    let email = args[1];
-    // create()
+    create({
+      name: args[1],
+      email: args[2],
+      password: args[3],
+      password_confirmation: args[4]  
+    })
     break;
     
-  case 'get_user':
+  case 'post':
     break;
 
   default:
     console.log('Unknown action!');
 }
 
-create({
-  email: email,
-  password: password,
-  password_confirmation: password_confirmation
-})
+
