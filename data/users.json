@@ -4,5 +4,17 @@
     "name": "tatang",
     "email": "tatang@gmail",
     "password": "1234"
+  },
+  {
+    "id": 2,
+    "name": "test",
+    "email": "test@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 3,
+    "name": "teddy",
+    "email": "teddy@meong.ouo",
+    "password": "qwerty"
   }
 ]
