@@ -1,14 +1,8 @@
 [
   {
-    "email": "test01@mail.com",
-    "password": "123456"
-  },
-  {
-    "email": "test02@mail.com",
-    "password": "123456"
-  },
-  {
-    "email": "test02@mail.com",
-    "password": "123456"
+    "id": 1,
+    "name": "tatang",
+    "email": "tatang@gmail",
+    "password": "1234"
   }
 ]
