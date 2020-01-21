@@ -20,4 +20,19 @@ function createData(data) {
   console.log('Data created!');
 }
 
-module.exports = createData;
+function createPost(data) {
+  var post = require('./data/posts.json');
+  post.push({
+    id: user.length + 1,
+    tittle: data.tittle,
+    body: data.body
+  })
+
+  fs.writeFileSync(`./data/posts.json`, JSON.stringify(post, null, 2));
+  console.log('Data created!');
+}
+
+module.exports = {
+  createData,
+  createPost
+}
